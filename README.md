@@ -63,7 +63,7 @@ Bello bellt: Wuff!
 
 3. Im Hauptprogramm (`main`) wird das Objekt `hund` erstellt, und die überschreibene Methode `essen()` aus der Unterklasse wird aufgerufen.
 
-Mit der `@Override`-Annotation wird außerdem sichergestellt, dass die Methode korrekt überschrieben wird – falls sie in der Oberklasse nicht existiert oder anders benannt ist, wird ein Fehler ausgelöst. Dies hilft, Fehler zu vermeiden! 🛠
+Mit der `@Override`-Annotation wird außerdem sichergestellt, dass die Methode korrekt überschrieben wird – falls sie in der Oberklasse nicht existiert oder anders benannt ist, wird ein Fehler ausgelöst. Dies hilft, Fehler zu vermeiden!
 
 ---
 
