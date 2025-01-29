@@ -8,15 +8,10 @@ Dieses Repository enthält mein persönliches Lernjournal, in dem ich meine Erke
 -   **Eigenes Nachschlagewerk**: Falls ich später auf ähnliche Probleme stoße, kann ich auf meine Einträge zurückgreifen.
 -   **Transparenz für meinen Chef**: Mein Chef kann überprüfen, welche neuen Konzepte ich gelernt habe.
 
-## Struktur
+## Inhalt
 
--   **[Modul 122](./Modul%20122/)**
--   **[Modul 231](./Modul%20231/)**
--   **[Modul 320](./Modul%20320/)**
--   **[Modul 322](./Modul%20322/)**
--   **[Modul 346](./Modul%20346/)**
--   **[Modul 426](./Modul%20426/)**
--   **[Modul 431](./Modul%20431/)**
+-   **[2025-01-28](./2025-01-28/)**
+-   **[2025-01-21](./2025-01-21/)**
 
 ## Technologien & Themen
 
@@ -40,5 +35,4 @@ Da dies mein persönliches Lernjournal ist, sind externe Beiträge nicht vorgese
 
 ---
 
-> [!NOTE]
-> _Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert._
+> [!NOTE] > _Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert._
