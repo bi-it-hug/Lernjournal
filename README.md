@@ -1,127 +1,44 @@
-# Lernjournal
+# Mein Lernjournal
 
-## Übersicht:
+Dieses Repository enthält mein persönliches Lernjournal, in dem ich meine Erkenntnisse aus den Bereichen Programmierung, Webentwicklung und verwandten Themen dokumentiere. Es dient sowohl als Nachweis meines Lernfortschritts als auch als Referenz für zukünftige Projekte.
 
--   **[2025-01-28](#2025-01-28)**
--   **[2025-01-21](#2025-01-21)**
+## Zweck des Journals
 
----
+-   **Lernfortschritt dokumentieren**: Ich notiere, was ich verstanden habe, um meine Entwicklung nachvollziehen zu können.
+-   **Eigenes Nachschlagewerk**: Falls ich später auf ähnliche Probleme stoße, kann ich auf meine Einträge zurückgreifen.
+-   **Transparenz für meinen Chef**: Mein Chef kann überprüfen, welche neuen Konzepte ich gelernt habe.
 
-## 2025-01-28
+## Struktur
 
-### Override Annotation
+-   **[Modul 122](./Modul%20122/)**
+-   **[Modul 231](./Modul%20231/)**
+-   **[Modul 320](./Modul%20320/)**
+-   **[Modul 322](./Modul%20322/)**
+-   **[Modul 346](./Modul%20346/)**
+-   **[Modul 426](./Modul%20426/)**
+-   **[Modul 431](./Modul%20431/)**
 
-```java
-// Oberklasse
-class Tier {
-    String name;
+## Technologien & Themen
 
-    // Methode in der Oberklasse
-    void essen() {
-        System.out.println(name + " isst.");
-    }
-}
+Hier dokumentiere ich alles, was ich lerne, z. B.:
 
-// Unterklasse
-class Hund extends Tier {
-    // Methode in der Unterklasse, die die Methode der Oberklasse überschreibt
-    @Override
-    void essen() {
-        System.out.println(name + " isst Hundefutter.");
-    }
+-   Programmiersprachen (z. B. Python, Java, JavaScript)
+-   Webentwicklung (HTML, CSS, React, Blazor)
+-   Datenbanken (SQL, NoSQL)
+-   Softwareentwicklungsmethoden (SCRUM, Clean Code)
+-   Tools & Best Practices (Git, Docker, CI/CD)
 
-    // Zusätzliche Methode in der Unterklasse
-    void bellen() {
-        System.out.println(name + " bellt: Wuff!");
-    }
-}
+## Wie ich mein Journal nutze
 
-// Hauptprogramm
-public class VererbungBeispiel {
-    public static void main(String[] args) {
-        Hund hund = new Hund();
-        hund.name = "Bello";  // Attribut der Oberklasse
-        hund.essen();         // Methode der Unterklasse (überschreibt die Methode der Oberklasse)
-        hund.bellen();        // Methode der Unterklasse
-    }
-}
-```
+-   **Neue Einträge**: Immer wenn ich ein Konzept verstanden habe, erstelle ich einen neuen Eintrag.
+-   **Reflexion**: Ich überprüfe regelmäßig ältere Einträge, um mein Wissen zu vertiefen.
+-   **Verbesserungen**: Falls sich meine Methoden ändern, aktualisiere ich bestehende Notizen.
 
-### **Ausgabe:**
+## Beitrag & Feedback
 
-```
-Bello isst Hundefutter.
-Bello bellt: Wuff!
-```
+Da dies mein persönliches Lernjournal ist, sind externe Beiträge nicht vorgesehen. Mein Chef kann jedoch Kommentare oder Verbesserungsvorschläge geben.
 
 ---
 
-### **Erklärung:**
-
-1. **`@Override`**: In der Unterklasse `Hund` überschreiben wir die Methode `essen()`, die in der Oberklasse `Tier` definiert ist. Die Annotation `@Override` zeigt an, dass eine Methode der Oberklasse bewusst überschrieben wird.
-2. Die Methode `essen()` in der Klasse `Hund` ersetzt die Implementierung von `essen()` in der Klasse `Tier`, sodass die Ausgabe `Bello isst Hundefutter.` erscheint, anstelle der ursprünglichen Ausgabe `Bello isst.`.
-
-3. Im Hauptprogramm (`main`) wird das Objekt `hund` erstellt, und die überschreibene Methode `essen()` aus der Unterklasse wird aufgerufen.
-
-Mit der `@Override`-Annotation wird außerdem sichergestellt, dass die Methode korrekt überschrieben wird – falls sie in der Oberklasse nicht existiert oder anders benannt ist, wird ein Fehler ausgelöst. Dies hilft, Fehler zu vermeiden!
-
----
-
-## 2025-01-21
-
-### Java Vererbung
-
-**Vererbung** in der Programmierung (besonders in objektorientierten Sprachen wie Java) ist ein Konzept, bei dem eine Klasse (Unterklasse) Eigenschaften und Methoden von einer anderen Klasse (Oberklasse) erbt. Dadurch kann Code wiederverwendet und erweitert werden.
-
-Die Oberklasse stellt allgemeine Funktionalitäten bereit, und die Unterklasse kann diese erweitern oder spezialisieren.
-
----
-
-### **Beispiel: Vererbung in Java**
-
-```java
-// Oberklasse
-class Tier {
-    String name;
-
-    void essen() {
-        System.out.println(name + " isst.");
-    }
-}
-
-// Unterklasse
-class Hund extends Tier {
-    void bellen() {
-        System.out.println(name + " bellt: Wuff!");
-    }
-}
-
-// Hauptprogramm
-public class VererbungBeispiel {
-    public static void main(String[] args) {
-        Hund hund = new Hund();
-        hund.name = "Bello";  // Attribut der Oberklasse
-        hund.essen();         // Methode der Oberklasse
-        hund.bellen();        // Methode der Unterklasse
-    }
-}
-```
-
-### **Ausgabe:**
-
-```
-Bello isst.
-Bello bellt: Wuff!
-```
-
----
-
-### **Erklärung:**
-
-1. **`Tier`** ist die Oberklasse, die allgemeine Eigenschaften und Methoden definiert (z. B. `essen()`).
-2. **`Hund`** ist die Unterklasse, die die Eigenschaften von `Tier` erbt und neue Methoden hinzufügt (z. B. `bellen()`).
-3. Im Hauptprogramm (`main`) wird ein Objekt der Klasse `Hund` erstellt, das auf Methoden und Attribute der Oberklasse sowie der Unterklasse zugreifen kann.
-
-Vererbung ermöglicht eine einfache und saubere Wiederverwendbarkeit des Codes!
-
----
+[!NOTE]
+_Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert._
