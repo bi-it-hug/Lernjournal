@@ -5,13 +5,15 @@ Dieses Repository enthält mein persönliches Lernjournal, in dem ich meine Erke
 ## Zweck des Journals
 
 -   **Lernfortschritt dokumentieren**: Ich notiere, was ich verstanden habe, um meine Entwicklung nachvollziehen zu können.
--   **Eigenes Nachschlagewerk**: Falls ich später auf ähnliche Probleme stoße, kann ich auf meine Einträge zurückgreifen.
+
+-   **Eigenes Nachschlagewerk**: Falls ich später auf ähnliche Probleme stosse, kann ich auf meine Einträge zurückgreifen.
+
 -   **Transparenz für meinen Chef**: Mein Chef kann überprüfen, welche neuen Konzepte ich gelernt habe.
 
 ## Inhalt
 
--   **[2025-01-28](./2025-01-28/)**
--   **[2025-01-21](./2025-01-21/)**
+-   **[2025-01-28](./2025-01-28/)**: Polymorphismus
+-   **[2025-01-21](./2025-01-21/)**: Vererbung
 
 ## Technologien & Themen
 
@@ -26,7 +28,7 @@ Hier dokumentiere ich alles, was ich lerne, z. B.:
 ## Wie ich mein Journal nutze
 
 -   **Neue Einträge**: Immer wenn ich ein Konzept verstanden habe, erstelle ich einen neuen Eintrag.
--   **Reflexion**: Ich überprüfe regelmäßig ältere Einträge, um mein Wissen zu vertiefen.
+-   **Reflexion**: Ich überprüfe regelmässig ältere Einträge, um mein Wissen zu vertiefen.
 -   **Verbesserungen**: Falls sich meine Methoden ändern, aktualisiere ich bestehende Notizen.
 
 ## Beitrag & Feedback
@@ -36,4 +38,4 @@ Da dies mein persönliches Lernjournal ist, sind externe Beiträge nicht vorgese
 ---
 
 > [!NOTE]
-> Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert
+> Dieses Journal ist ein lebendiges Dokument und wird regelmässig aktualisiert
