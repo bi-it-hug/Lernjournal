@@ -35,4 +35,5 @@ Da dies mein persönliches Lernjournal ist, sind externe Beiträge nicht vorgese
 
 ---
 
-> [!NOTE] > _Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert._
+> [!NOTE]
+> Dieses Journal ist ein lebendiges Dokument und wird regelmäßig aktualisiert
