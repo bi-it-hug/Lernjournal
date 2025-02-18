@@ -24,6 +24,7 @@ Es dient sowohl als Nachweis meines Lernfortschritts als auch als Referenz für 
 
 ## Inhalt
 
+-   **[2025-02-18](./2025-02-18/)**: Cloud-Computing
 -   **[2025-01-28](./2025-01-28/)**: Polymorphismus
 -   **[2025-01-21](./2025-01-21/)**: Vererbung
 
