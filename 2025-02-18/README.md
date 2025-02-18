@@ -33,9 +33,7 @@ Ein solches Suffix wird durch einen **Trennstrich (`-`)** eingeleitet und besteh
 **Beispiel:**  
 `1.0.0-beta1`
 
-## <br>
-
-<br>
+---
 
 ### **Was ist Cloud?**
 
@@ -111,5 +109,3 @@ Ein solches Suffix wird durch einen **Trennstrich (`-`)** eingeleitet und besteh
     -   Nutzung von Container-Technologien (Docker, Kubernetes)
     -   Open-Source-Plattformen & Code-Repositories (GitHub, GitLab)
     -   Cloud-basierte Marktplätze für Software & Services
-
----
