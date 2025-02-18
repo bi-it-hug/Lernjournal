@@ -1,8 +1,43 @@
-## 2025-02-18
+# 2025-02-18
 
-### **UEK-210**
+## **UEK-210**
 
-#### **1. Was ist Cloud?**
+### **Semantic Versioning (SemVer)**
+
+Entwickler und auch Systemadministratoren stehen vor der Frage, nach welchem Schema sie eine eigenentwickelte Software, Konfigurationsdateien oder Hardware-Releases versionieren. Eine insbesondere im Unix- und Webumfeld verbreitete Variante stellt das sogenannte **"Semantic Versioning"** dar, häufig als **SemVer** abgekürzt.
+
+Das Verfahren definiert eine Versionsnummer in der einfachsten Variante als Kombination dreier Zahlen: einer **Hauptversions-**, einer **Nebenversions-** und einer **Revisionsnummer**, die jeweils einer nichtnegativen Ganzzahl entsprechen.
+
+**Struktur einer Versionsnummer**
+
+Die Zählung beginnt zunächst bei der Versionsnummer **0.0.1**. Anschließend werden die einzelnen Nummern nach vordefinierten Kriterien hochgezählt, wobei eine Veränderung der Hauptversion die Nebenversion und eine Veränderung der Nebenversion die Revision jeweils auf den Wert **0** zurücksetzt.
+
+Wichtig ist, dass eine einzelne Nummer nicht zwingend einstellig sein muss:  
+Auf die Versionsnummer **0.9.x** folgt also nicht zwingend **1.0.0**, sondern gegebenenfalls zunächst die Version **0.10.0**.
+
+### Regeln zur Versionsänderung
+
+Auf Grundlage einer Versionsnummer von **MAJOR.MINOR.PATCH** werden die einzelnen Elemente folgendermaßen erhöht:
+
+-   **MAJOR** wird erhöht, wenn API-inkompatible Änderungen veröffentlicht werden.
+-   **MINOR** wird erhöht, wenn neue Funktionalitäten, welche kompatibel zur bisherigen API sind, veröffentlicht werden.
+-   **PATCH** wird erhöht, wenn die Änderungen ausschließlich API-kompatible Bugfixes umfassen.
+
+Zusätzlich sind Bezeichner für Vorveröffentlichungen und **Build-Metadaten** als Erweiterungen zum **MAJOR.MINOR.PATCH**-Format verfügbar.
+
+### Vorabversionen kennzeichnen
+
+Optional kann eine Versionsnummer um ein **Suffix** ergänzt werden, um Vorabversionen zu kennzeichnen.  
+Ein solches Suffix wird durch einen **Trennstrich (`-`)** eingeleitet und besteht danach aus beliebigen alphanumerischen Zeichen.
+
+**Beispiel:**  
+`1.0.0-beta1`
+
+## <br>
+
+<br>
+
+### **Was ist Cloud?**
 
 -   **Entstehung des Begriffs Cloud:**
 

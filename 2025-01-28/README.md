@@ -1,8 +1,8 @@
-## 2025-01-28
+# 2025-01-28
 
-### **Dynamischer Polymorphismus**
+## **Dynamischer Polymorphismus**
 
-#### **1. Was ist dynamischer Polymorphismus?**
+### **1. Was ist dynamischer Polymorphismus?**
 
 Polymorphismus bedeutet, dass eine Methode in einer Oberklasse definiert und in Unterklassen unterschiedlich umgesetzt werden kann. Dabei unterscheidet man:
 

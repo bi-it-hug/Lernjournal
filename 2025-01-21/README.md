@@ -1,6 +1,6 @@
-## 2025-01-21
+# 2025-01-21
 
-### Vererbung
+## Vererbung
 
 **Vererbung** in der Programmierung (besonders in objektorientierten Sprachen wie Java) ist ein Konzept, bei dem eine Klasse (Unterklasse) Eigenschaften und Methoden von einer anderen Klasse (Oberklasse) erbt. Dadurch kann Code wiederverwendet und erweitert werden.
 
@@ -8,7 +8,7 @@ Die Oberklasse stellt allgemeine Funktionalitäten bereit, und die Unterklasse k
 
 ---
 
-### **Beispiel: Vererbung in Java**
+## **Beispiel: Vererbung in Java**
 
 ```java
 // Oberklasse
@@ -38,7 +38,7 @@ public class VererbungBeispiel {
 }
 ```
 
-### **Ausgabe:**
+## **Ausgabe:**
 
 ```
 Bello isst.
@@ -47,7 +47,7 @@ Bello bellt: Wuff!
 
 ---
 
-### **Erklärung:**
+## **Erklärung:**
 
 1. **`Tier`** ist die Oberklasse, die allgemeine Eigenschaften und Methoden definiert (z. B. `essen()`).
 2. **`Hund`** ist die Unterklasse, die die Eigenschaften von `Tier` erbt und neue Methoden hinzufügt (z. B. `bellen()`).
