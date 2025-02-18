@@ -2,15 +2,15 @@
 
 Dieses Repository enthält mein persönliches Lernjournal, in dem ich meine Erkenntnisse aus folgenden Bereichen dokumentiere:
 
-- **Programmierung** & **Softwareentwicklung**
-- **Web-** & **Mobile-Entwicklung**
-- **Datenbanken** & **Datenmanagement**
-- **Softwarearchitektur** & **Entwicklungsmethoden**
-- **DevOps** & **Software Deployment**
-- **Sicherheit** & **Datenschutz**
-- **Projektmanagement** & **Zusammenarbeit**
-- **Künstliche Intelligenz** & **Automatisierung**
-- **IT-Infrastruktur** & **Netzwerke**
+-   **Programmierung** & **Softwareentwicklung**
+-   **Web-** & **Mobile-Entwicklung**
+-   **Datenbanken** & **Datenmanagement**
+-   **Softwarearchitektur** & **Entwicklungsmethoden**
+-   **DevOps** & **Software Deployment**
+-   **Sicherheit** & **Datenschutz**
+-   **Projektmanagement** & **Zusammenarbeit**
+-   **Künstliche Intelligenz** & **Automatisierung**
+-   **IT-Infrastruktur** & **Netzwerke**
 
 Es dient sowohl als Nachweis meines Lernfortschritts als auch als Referenz für zukünftige Projekte.
 
