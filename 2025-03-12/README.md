@@ -88,5 +88,3 @@ Vererbung ermöglicht es einer Klasse, von einer anderen Klasse zu erben. Die ab
 -   **Interfaces** sind flexibler und ermöglichen eine lose Kopplung und das Teilen von Verhalten zwischen nicht verwandten Klassen.
 
 In der Praxis wird oft eine Kombination aus beiden verwendet, um sowohl die Wiederverwendbarkeit von Code als auch die Flexibilität in der Struktur zu maximieren.
-
----
