@@ -109,3 +109,8 @@ Ein solches Suffix wird durch einen **Trennstrich (`-`)** eingeleitet und besteh
     -   Nutzung von Container-Technologien (Docker, Kubernetes)
     -   Open-Source-Plattformen & Code-Repositories (GitHub, GitLab)
     -   Cloud-basierte Marktplätze für Software & Services
+
+
+docker run -d -p 8080:80 -v \\wsl.localhost\Ubuntu\home\hug\Website:/usr/share/nginx/html --name Website nginx
+
+docker cp Website:/usr/share/nginx/html/. \\wsl.localhost\Ubuntu\home\hug\Website
