@@ -1,54 +1,14 @@
-# Mein Lernjournal
+# Lernjournal
 
-Dieses Repository enthält mein persönliches Lernjournal, in dem ich meine Erkenntnisse aus folgenden Bereichen dokumentiere:
-
--   **Programmierung** & **Softwareentwicklung**
--   **Web-** & **Mobile-Entwicklung**
--   **Datenbanken** & **Datenmanagement**
--   **Softwarearchitektur** & **Entwicklungsmethoden**
--   **DevOps** & **Software Deployment**
--   **Sicherheit** & **Datenschutz**
--   **Projektmanagement** & **Zusammenarbeit**
--   **Künstliche Intelligenz** & **Automatisierung**
--   **IT-Infrastruktur** & **Netzwerke**
-
-Es dient sowohl als Nachweis meines Lernfortschritts als auch als Referenz für zukünftige Projekte.
-
-## Zweck des Journals
-
--   **Lernfortschritt dokumentieren**: Ich notiere, was ich verstanden habe, um meine Entwicklung nachvollziehen zu können.
-
--   **Eigenes Nachschlagewerk**: Falls ich später auf ähnliche Probleme stosse, kann ich auf meine Einträge zurückgreifen.
-
--   **Transparenz für meinen Chef**: Mein Chef kann überprüfen, welche neuen Konzepte ich gelernt habe.
+Willkommen in meinem Lernjournal-Repository! Dieses Repository enthält Lernjournal-Einträge, die ich während meiner Arbeitszeit erstellt habe. Es umfasst verschiedene Projekte, Aufgaben und andere Unterlagen, die meinen Lernfortschritt und meine Leistungen zeigen.
 
 ## Inhalt
 
+-   **[2025-03-12](./2025-03-12/)**: Vererbung vs. Interface
 -   **[2025-02-18](./2025-02-18/)**: Cloud-Computing
 -   **[2025-01-28](./2025-01-28/)**: Polymorphismus
 -   **[2025-01-21](./2025-01-21/)**: Vererbung
 
-## Technologien & Themen
+## Zweck
 
-Hier dokumentiere ich alles, was ich lerne, z. B.:
-
--   Programmiersprachen (z. B. Python, Java, JavaScript)
--   Webentwicklung (HTML, CSS, React, Blazor)
--   Datenbanken (SQL, NoSQL)
--   Softwareentwicklungsmethoden (SCRUM, Clean Code)
--   Tools & Best Practices (Git, Docker, CI/CD)
-
-## Wie ich mein Journal nutze
-
--   **Neue Einträge**: Immer wenn ich ein Konzept verstanden habe, erstelle ich einen neuen Eintrag.
--   **Reflexion**: Ich überprüfe regelmässig ältere Einträge, um mein Wissen zu vertiefen.
--   **Verbesserungen**: Falls sich meine Methoden ändern, aktualisiere ich bestehende Notizen.
-
-## Beitrag & Feedback
-
-Da dies mein persönliches Lernjournal ist, sind externe Beiträge nicht vorgesehen. Mein Chef kann jedoch Kommentare oder Verbesserungsvorschläge geben.
-
----
-
-> [!NOTE]
-> Dieses Journal ist ein lebendiges Dokument und wird regelmässig aktualisiert
+Ich dokumentiere meinen Lernfortschritt, indem ich festhalte, was ich verstanden habe, sodass ich meine Entwicklung nachvollziehen kann. Außerdem erstelle ich mir ein eigenes Nachschlagewerk, auf das ich später zurückgreifen kann, falls ich auf ähnliche Probleme stoße. Durch diese Aufzeichnungen ermögliche ich zudem Transparenz für meinen Chef, da er so nachvollziehen kann, welche neuen Konzepte ich gelernt habe.
