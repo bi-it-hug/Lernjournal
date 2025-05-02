@@ -4,6 +4,7 @@ Willkommen in meinem Lernjournal-Repository! Dieses Repository enthält Lernjour
 
 ## Inhalt
 
+-   **[2025-05-02](./2025-05-02/)**: Docker Basics
 -   **[2025-03-12](./2025-03-12/)**: Vererbung vs. Interface
 -   **[2025-02-18](./2025-02-18/)**: Cloud-Computing
 -   **[2025-01-28](./2025-01-28/)**: Polymorphismus
