@@ -1,156 +1,104 @@
-# 2025-01-28
+# Polymorphismus (2025-01-28)
 
-## **Dynamischer Polymorphismus**
+## Zusammenfassung
 
-### **1. Was ist dynamischer Polymorphismus?**
+In diesem Eintrag beschäftige ich mich mit dem Konzept des Polymorphismus in der objektorientierten Programmierung, seinen verschiedenen Formen und praktischen Anwendungsbeispielen.
 
-Polymorphismus bedeutet, dass eine Methode in einer Oberklasse definiert und in Unterklassen unterschiedlich umgesetzt werden kann. Dabei unterscheidet man:
+## Lernziele
 
--   **Statischen Polymorphismus (Methodenüberladung)** → entscheidet sich zur **Kompilierungszeit**.
--   **Dynamischen Polymorphismus (Methodenüberschreibung)** → entscheidet sich zur **Laufzeit**.
+-   Verständnis des Polymorphismus-Konzepts
+-   Kenntnis der verschiedenen Arten von Polymorphismus
+-   Praktische Anwendungsbeispiele
+-   Best Practices für die Implementierung
 
-Dynamischer Polymorphismus tritt auf, wenn eine Methode in einer Oberklasse vorhanden ist, aber von Unterklassen überschrieben wird. Der entscheidende Punkt ist, dass das **Objekt selbst bestimmt, welche Methode aufgerufen wird, nicht der Referenztyp**.
+## Inhaltsverzeichnis
 
----
+1. [Einführung](#einführung)
+2. [Arten von Polymorphismus](#arten-von-polymorphismus)
+3. [Praktische Beispiele](#praktische-beispiele)
+4. [Vorteile und Anwendungsfälle](#vorteile-und-anwendungsfälle)
+5. [Zusammenfassung](#zusammenfassung)
 
-### **2. Anwendung im Code**
+## Einführung
 
-Schauen wir uns den Code genauer an:
+Polymorphismus ist ein grundlegendes Konzept der objektorientierten Programmierung, das es ermöglicht, dass Objekte unterschiedlicher Klassen auf die gleiche Weise behandelt werden können. Das Wort "Polymorphismus" kommt aus dem Griechischen und bedeutet "viele Formen".
 
-#### **Basisklasse `Animal` (Elternklasse)**
+## Arten von Polymorphismus
+
+### Ad-hoc Polymorphismus
+
+-   Überladung von Methoden
+-   Überladung von Operatoren
+-   Beispiel: `+` kann Zahlen addieren oder Strings verketten
+
+### Parametrischer Polymorphismus
+
+-   Generische Typen und Methoden
+-   Beispiel: `List<T>` in C# oder Java
+
+### Subtyp-Polymorphismus
+
+-   Vererbung und Interfaces
+-   Beispiel: Eine Methode kann mit verschiedenen Unterklassen arbeiten
+
+## Praktische Beispiele
 
 ```java
-public class Animal {
-
-    String name;
-    int age;
-
-    public Animal(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public void speak() {
-        System.out.println();
-    }
+// Beispiel für Subtyp-Polymorphismus
+interface Form {
+    double berechneFläche();
 }
-```
 
--   `Animal` besitzt eine Methode `speak()`, die nichts ausgibt.
--   `speak()` ist **nicht abstrakt**, d. h. sie hat eine leere Implementierung.
+class Kreis implements Form {
+    private double radius;
 
-#### **Unterklassen `Cat` und `Dog` (Kindklassen)**
-
-Diese Klassen erben von `Animal` und überschreiben die Methode `speak()`.
-
-```java
-public class Cat extends Animal {
-
-    String claws;
-
-    public Cat(String name, int age, String claws) {
-        super(name, age);
-        this.claws = claws;
+    public Kreis(double radius) {
+        this.radius = radius;
     }
 
     @Override
-    public void speak() {
-        System.out.println("Meow");
+    public double berechneFläche() {
+        return Math.PI * radius * radius;
     }
 }
-```
 
--   `Cat` überschreibt `speak()`, sodass bei einer Katze `"Meow"` ausgegeben wird.
+class Rechteck implements Form {
+    private double breite, höhe;
 
-```java
-public class Dog extends Animal {
-
-    String paws;
-
-    public Dog(String name, int age, String paws) {
-        super(name, age);
-        this.paws = paws;
+    public Rechteck(double breite, double höhe) {
+        this.breite = breite;
+        this.höhe = höhe;
     }
 
     @Override
-    public void speak() {
-        System.out.println("Woof");
+    public double berechneFläche() {
+        return breite * höhe;
     }
 }
 ```
 
--   `Dog` überschreibt `speak()`, sodass bei einem Hund `"Woof"` ausgegeben wird.
+## Vorteile und Anwendungsfälle
 
----
+### Vorteile
 
-### **3. Dynamischer Polymorphismus in Aktion**
+-   Wiederverwendbarkeit von Code
+-   Flexibilität und Erweiterbarkeit
+-   Bessere Wartbarkeit
+-   Reduzierung von Code-Duplikation
 
-Im Hauptprogramm werden `Cat` und `Dog` Objekte erstellt und in einer `List<Animal>` gespeichert:
+### Anwendungsfälle
 
-```java
-public class App {
+-   GUI-Komponenten
+-   Datenbankzugriff
+-   Plugin-Systeme
+-   Algorithmen mit verschiedenen Implementierungen
 
-    public static void main(String[] args) {
+## Zusammenfassung
 
-        List<Animal> allAnimals = List.of(
-                new Cat("Whiskers", 4, "small"),
-                new Dog("Bruno", 10, "big")
-        );
+Polymorphismus ist ein mächtiges Konzept, das die Flexibilität und Wartbarkeit von Code verbessert. Durch die verschiedenen Arten von Polymorphismus können Entwickler eleganten und wiederverwendbaren Code schreiben.
 
-        for (Animal animal : allAnimals) {
-            animal.speak();
-        }
-    }
-}
-```
+## Weiterführende Links
 
--   Die `List<Animal>` speichert `Cat`- und `Dog`-Objekte.
--   Die **Referenzvariablen** haben den Typ `Animal`, aber die **tatsächlichen Objekte** sind `Cat` oder `Dog`.
--   Beim Aufruf von `animal.speak()` wird **zur Laufzeit entschieden**, welche Methode ausgeführt wird.
-
-### **4. Ablauf zur Laufzeit**
-
-**Schritt für Schritt:**
-
-1. `animal` zeigt zuerst auf das `Cat`-Objekt.
-    - `animal.speak();` ruft die `speak()`-Methode von `Cat` auf → `"Meow"` wird ausgegeben.
-2. Danach zeigt `animal` auf das `Dog`-Objekt.
-    - `animal.speak();` ruft die `speak()`-Methode von `Dog` auf → `"Woof"` wird ausgegeben.
-
----
-
-### **5. Wichtige Konzepte im Code**
-
-#### **Methodenüberschreibung (`@Override`)**
-
--   Die Unterklassen definieren die Methode `speak()` neu.
--   `@Override` sorgt dafür, dass Java prüft, ob tatsächlich eine Methode aus der Oberklasse überschrieben wird.
-
-#### **Polymorphe Variablen (`Animal animal = new Cat(...)`)**
-
--   Eine Variable vom Typ `Animal` kann sowohl eine `Cat` als auch einen `Dog` speichern.
--   Der **tatsächliche Objekttyp** entscheidet, welche Methode aufgerufen wird.
-
-#### **Laufzeitbindung (Late Binding)**
-
--   Zur **Kompilierungszeit** weiss der Compiler nur, dass `animal.speak()` existiert.
--   Erst zur **Laufzeit** wird entschieden, welche konkrete Methode (`Cat.speak()` oder `Dog.speak()`) aufgerufen wird.
-
----
-
-### **6. Vorteile von dynamischem Polymorphismus**
-
-✅ **Erweiterbarkeit**: Neue Tierarten (`Bird`, `Fish` etc.) können einfach hinzugefügt werden, ohne den Code in `App` ändern zu müssen.
-
-✅ **Flexibilität**: Die `List<Animal>` kann verschiedene `Animal`-Unterklassen enthalten, ohne dass spezielle Fallunterscheidungen nötig sind.
-
-✅ **Code-Wiederverwendbarkeit**: Die Methode `speak()` wird in der Basisklasse definiert und kann in Unterklassen einfach angepasst werden.
-
----
-
-### **7. Fazit**
-
-Dynamischer Polymorphismus ermöglicht es, Methodenaufrufe zur Laufzeit je nach Objekttyp unterschiedlich auszuführen. In deinem Code sorgt er dafür, dass eine Katze "Meow" und ein Hund "Woof" sagt, obwohl beide als `Animal` gespeichert sind. Dies macht den Code flexibler, erweiterbar und leicht verständlich.
-
-> [!NOTE]
-> [Code](./Polymorphism/src/)
+-   [Java Tutorial: Polymorphismus](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+-   [C# Polymorphismus](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/classes-and-structs/polymorphism)
+-   [Design Patterns](https://refactoring.guru/design-patterns)

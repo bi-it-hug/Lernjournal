@@ -1,62 +1,51 @@
-## 2025-05-02
+# Docker Basics (2025-05-02)
 
-### **Docker Basics**
+## Zusammenfassung
 
-#### **Was ist Docker?**
+In diesem Eintrag beschäftige ich mich mit den Grundlagen von Docker, einem wichtigen Tool für Containerisierung und Anwendungsentwicklung.
 
-Docker ist eine Plattform, die es ermöglicht, Anwendungen in sogenannten **Containern** zu verpacken und auszuführen. Ein Container enthält alles, was eine Anwendung braucht: Code, Laufzeit, Systemwerkzeuge, Bibliotheken usw. Damit funktioniert die Anwendung unabhängig von der Umgebung – lokal, auf dem Server oder in der Cloud.
+## Lernziele
 
----
+-   Verständnis der grundlegenden Docker-Konzepte
+-   Erstellung und Verwaltung von Docker-Containern
+-   Arbeit mit Docker-Images
+-   Docker-Compose für Multi-Container-Anwendungen
 
-### **Grundlegende Docker-Komponenten:**
+## Inhaltsverzeichnis
 
-| Komponente     | Beschreibung                                                              |
-| -------------- | ------------------------------------------------------------------------- |
-| **Image**      | Eine Vorlage (Template), aus der Container erstellt werden.               |
-| **Container**  | Eine laufende Instanz eines Images.                                       |
-| **Dockerfile** | Eine Datei, die beschreibt, wie ein Image gebaut werden soll.             |
-| **Docker Hub** | Eine Online-Plattform zum Teilen von Docker-Images (wie GitHub für Code). |
+1. [Einführung](#einführung)
+2. [Docker-Grundlagen](#docker-grundlagen)
+3. [Praktische Beispiele](#praktische-beispiele)
+4. [Zusammenfassung](#zusammenfassung)
 
----
+## Einführung
 
-### **Wichtige Befehle, die ich gelernt habe:**
+Docker ist eine Plattform zur Entwicklung, Auslieferung und Ausführung von Anwendungen in Containern. Container ermöglichen es, Anwendungen und ihre Abhängigkeiten in einer isolierten Umgebung zu verpacken.
 
-```bash
-docker --version               # Version von Docker anzeigen
-docker pull nginx              # Image von Docker Hub herunterladen
-docker images                  # Alle lokal verfügbaren Images anzeigen
-docker run hello-world         # Container aus Image starten (einmalig)
-docker ps                      # Aktive Container anzeigen
-docker ps -a                   # Alle Container anzeigen (auch gestoppte)
-docker stop <container-id>     # Container stoppen
-docker rm <container-id>       # Container löschen
-docker rmi <image-id>          # Image löschen
-```
+## Docker-Grundlagen
 
----
+-   **Container**: Isolierte Umgebungen für Anwendungen
+-   **Images**: Vorlagen für Container
+-   **Dockerfile**: Anweisungen zum Erstellen von Images
+-   **Docker Compose**: Tool für Multi-Container-Anwendungen
 
-### **Beispiel: Eigenes Image mit Dockerfile bauen**
+## Praktische Beispiele
 
 ```dockerfile
-# Dockerfile
-FROM node:18
+# Beispiel Dockerfile
+FROM python:3.9
 WORKDIR /app
 COPY . .
-RUN npm install
-CMD ["node", "index.js"]
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
 ```
 
-```bash
-docker build -t mein-node-app .
-docker run -p 3000:3000 mein-node-app
-```
+## Zusammenfassung
 
----
+Docker bietet eine effiziente Möglichkeit, Anwendungen zu entwickeln und zu deployen. Durch Containerisierung werden Abhängigkeiten isoliert und die Reproduzierbarkeit verbessert.
 
-### **Was ich verstanden habe:**
+## Weiterführende Links
 
--   Container sind leichtgewichtig und isoliert
--   Ein Container ist **kein** virtueller Rechner, sondern nutzt den Kernel des Hosts
--   Mit Docker kann man „es läuft auf meinem Rechner“ wirklich eliminieren
-
----
+-   [Docker Dokumentation](https://docs.docker.com/)
+-   [Docker Hub](https://hub.docker.com/)
+-   [Docker Compose Dokumentation](https://docs.docker.com/compose/)

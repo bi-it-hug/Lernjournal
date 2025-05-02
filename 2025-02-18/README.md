@@ -1,116 +1,75 @@
-# 2025-02-18
+# Cloud-Computing (2025-02-18)
 
-## **UEK-210**
+## Zusammenfassung
 
-### **Semantic Versioning (SemVer)**
+In diesem Eintrag beschäftige ich mich mit den Grundlagen des Cloud-Computing, seinen verschiedenen Service-Modellen und den wichtigsten Cloud-Anbietern.
 
-Entwickler und auch Systemadministratoren stehen vor der Frage, nach welchem Schema sie eine eigenentwickelte Software, Konfigurationsdateien oder Hardware-Releases versionieren. Eine insbesondere im Unix- und Webumfeld verbreitete Variante stellt das sogenannte **"Semantic Versioning"** dar, häufig als **SemVer** abgekürzt.
+## Lernziele
 
-Das Verfahren definiert eine Versionsnummer in der einfachsten Variante als Kombination dreier Zahlen: einer **Hauptversions-**, einer **Nebenversions-** und einer **Revisionsnummer**, die jeweils einer nichtnegativen Ganzzahl entsprechen.
+-   Verständnis der Cloud-Computing-Konzepte
+-   Kenntnis der verschiedenen Service-Modelle
+-   Überblick über führende Cloud-Anbieter
+-   Praktische Anwendungsbeispiele
 
-**Struktur einer Versionsnummer**
+## Inhaltsverzeichnis
 
-Die Zählung beginnt zunächst bei der Versionsnummer **0.0.1**. Anschließend werden die einzelnen Nummern nach vordefinierten Kriterien hochgezählt, wobei eine Veränderung der Hauptversion die Nebenversion und eine Veränderung der Nebenversion die Revision jeweils auf den Wert **0** zurücksetzt.
+1. [Einführung](#einführung)
+2. [Service-Modelle](#service-modelle)
+3. [Cloud-Anbieter](#cloud-anbieter)
+4. [Vorteile und Nachteile](#vorteile-und-nachteile)
+5. [Zusammenfassung](#zusammenfassung)
 
-Wichtig ist, dass eine einzelne Nummer nicht zwingend einstellig sein muss:  
-Auf die Versionsnummer **0.9.x** folgt also nicht zwingend **1.0.0**, sondern gegebenenfalls zunächst die Version **0.10.0**.
+## Einführung
 
-### Regeln zur Versionsänderung
+Cloud-Computing bezeichnet die Bereitstellung von IT-Ressourcen über das Internet. Anstatt eigene Hardware und Software zu betreiben, können Unternehmen und Entwickler auf die Infrastruktur, Plattformen und Anwendungen von Cloud-Anbietern zugreifen.
 
-Auf Grundlage einer Versionsnummer von **MAJOR.MINOR.PATCH** werden die einzelnen Elemente folgendermaßen erhöht:
+## Service-Modelle
 
--   **MAJOR** wird erhöht, wenn API-inkompatible Änderungen veröffentlicht werden.
--   **MINOR** wird erhöht, wenn neue Funktionalitäten, welche kompatibel zur bisherigen API sind, veröffentlicht werden.
--   **PATCH** wird erhöht, wenn die Änderungen ausschließlich API-kompatible Bugfixes umfassen.
+### Infrastructure as a Service (IaaS)
 
-Zusätzlich sind Bezeichner für Vorveröffentlichungen und **Build-Metadaten** als Erweiterungen zum **MAJOR.MINOR.PATCH**-Format verfügbar.
+-   Bereitstellung von virtuellen Maschinen, Speicher und Netzwerken
+-   Beispiele: AWS EC2, Azure Virtual Machines, Google Compute Engine
 
-### Vorabversionen kennzeichnen
+### Platform as a Service (PaaS)
 
-Optional kann eine Versionsnummer um ein **Suffix** ergänzt werden, um Vorabversionen zu kennzeichnen.  
-Ein solches Suffix wird durch einen **Trennstrich (`-`)** eingeleitet und besteht danach aus beliebigen alphanumerischen Zeichen.
+-   Bereitstellung von Entwicklungs- und Laufzeitumgebungen
+-   Beispiele: Heroku, Google App Engine, AWS Elastic Beanstalk
 
-**Beispiel:**  
-`1.0.0-beta1`
+### Software as a Service (SaaS)
 
----
+-   Bereitstellung von Anwendungen über das Internet
+-   Beispiele: Microsoft 365, Salesforce, Google Workspace
 
-### **Was ist Cloud?**
+## Cloud-Anbieter
 
--   **Entstehung des Begriffs Cloud:**
+| Anbieter     | Marktanteil | Besonderheiten                             |
+| ------------ | ----------- | ------------------------------------------ |
+| AWS          | ~33%        | Größter Anbieter, breites Angebot          |
+| Azure        | ~22%        | Starke Integration mit Microsoft-Produkten |
+| Google Cloud | ~11%        | Starke KI/ML-Dienste                       |
 
-    -   Symbol der Wolke als Darstellung von Netzwerken
-    -   Ursprünglich aus der Telekommunikation
+## Vorteile und Nachteile
 
--   **Definition Cloud (z. B. nach NIST):**
+### Vorteile
 
-    -   On-Demand-Netzwerkzugriff auf gemeinsam genutzte IT-Ressourcen
-    -   Skalierbar, flexibel, ortsunabhängig
+-   Skalierbarkeit
+-   Kosteneffizienz
+-   Flexibilität
+-   Globale Verfügbarkeit
 
--   **5 Merkmale einer Cloud:**
+### Nachteile
 
-    1. On-Demand Self-Service
-    2. Breiter Netzwerkkonnektivität
-    3. Ressourcenzusammenlegung (Multi-Tenancy)
-    4. Schnelle Skalierbarkeit
-    5. Messbare Services
+-   Abhängigkeit vom Anbieter
+-   Datenschutzbedenken
+-   Potenzielle Ausfallzeiten
+-   Komplexität der Migration
 
--   **Cloud-Dienstleistungen:**
+## Zusammenfassung
 
-    -   Speicher (z. B. Google Drive, OneDrive)
-    -   Computing (z. B. AWS EC2, Azure VM)
-    -   Datenbanken (z. B. AWS RDS, Firebase)
-    -   KI/ML-Dienste (z. B. Azure AI, Google Vertex AI)
+Cloud-Computing bietet zahlreiche Vorteile für Unternehmen und Entwickler, erfordert aber auch eine sorgfältige Planung und Berücksichtigung von Sicherheitsaspekten.
 
--   **Cloud-Anbieter:**
+## Weiterführende Links
 
-    -   Amazon Web Services (AWS)
-    -   Microsoft Azure
-    -   Google Cloud Platform (GCP)
-    -   IBM Cloud
-    -   Oracle Cloud
-
--   **Cloud-Deployment-Modelle:**
-
-    1. Public Cloud
-    2. Private Cloud
-    3. Hybrid Cloud
-    4. Community Cloud
-
--   **Cloud-Service-Modelle:**
-
-    1. Infrastructure as a Service (IaaS)
-    2. Platform as a Service (PaaS)
-    3. Software as a Service (SaaS)
-
--   **Vorteile der Cloud:**
-
-    -   Skalierbarkeit
-    -   Kosteneffizienz (Pay-as-you-use)
-    -   Flexibilität & Verfügbarkeit
-    -   Automatische Updates & Wartung
-    -   Globale Zugänglichkeit
-
--   **Nachteile der Cloud:**
-
-    -   Abhängigkeit vom Anbieter (Vendor Lock-in)
-    -   Sicherheits- & Datenschutzrisiken
-    -   Internetabhängigkeit
-    -   Begrenzte Kontrolle über Infrastruktur
-
--   **On-Premise-Dienste im Betrieb:**
-
-        -   Lokale Server für interne Anwendungen
-
-    s - Datenbanken mit sensiblen Daten - Spezialisierte Anwendungen (z. B. Produktionssteuerung)
-
--   **Technologietransfer in der Cloud:**
-    -   Bereitstellung über APIs & Webservices
-    -   Nutzung von Container-Technologien (Docker, Kubernetes)
-    -   Open-Source-Plattformen & Code-Repositories (GitHub, GitLab)
-    -   Cloud-basierte Marktplätze für Software & Services
-
-
-docker run -d -p 8080:80 -v \\wsl.localhost\Ubuntu\home\hug\Website:/usr/share/nginx/html --name Website nginx
-
-docker cp Website:/usr/share/nginx/html/. \\wsl.localhost\Ubuntu\home\hug\Website
+-   [AWS Dokumentation](https://docs.aws.amazon.com/)
+-   [Azure Dokumentation](https://docs.microsoft.com/de-de/azure/)
+-   [Google Cloud Dokumentation](https://cloud.google.com/docs)

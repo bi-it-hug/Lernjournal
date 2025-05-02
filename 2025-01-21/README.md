@@ -1,56 +1,102 @@
-# 2025-01-21
+# Vererbung (2025-01-21)
 
-## Vererbung
+## Zusammenfassung
 
-**Vererbung** in der Programmierung (besonders in objektorientierten Sprachen wie Java) ist ein Konzept, bei dem eine Klasse (Unterklasse) Eigenschaften und Methoden von einer anderen Klasse (Oberklasse) erbt. Dadurch kann Code wiederverwendet und erweitert werden.
+In diesem Eintrag beschäftige ich mich mit dem Konzept der Vererbung in der objektorientierten Programmierung, ihren verschiedenen Formen und praktischen Anwendungsbeispielen.
 
-Die Oberklasse stellt allgemeine Funktionalitäten bereit, und die Unterklasse kann diese erweitern oder spezialisieren.
+## Lernziele
 
----
+-   Verständnis des Vererbungskonzepts
+-   Kenntnis der verschiedenen Arten von Vererbung
+-   Praktische Anwendungsbeispiele
+-   Best Practices für die Implementierung
 
-## **Beispiel: Vererbung in Java**
+## Inhaltsverzeichnis
+
+1. [Einführung](#einführung)
+2. [Arten von Vererbung](#arten-von-vererbung)
+3. [Praktische Beispiele](#praktische-beispiele)
+4. [Vorteile und Nachteile](#vorteile-und-nachteile)
+5. [Zusammenfassung](#zusammenfassung)
+
+## Einführung
+
+Vererbung ist ein grundlegendes Konzept der objektorientierten Programmierung, das es ermöglicht, Eigenschaften und Methoden einer Klasse (Basisklasse) an eine andere Klasse (abgeleitete Klasse) weiterzugeben. Dies fördert die Wiederverwendbarkeit von Code und ermöglicht hierarchische Beziehungen zwischen Klassen.
+
+## Arten von Vererbung
+
+### Einfache Vererbung
+
+-   Eine Klasse erbt von genau einer Basisklasse
+-   Beispiel: `class Hund extends Tier`
+
+### Mehrfachvererbung
+
+-   Eine Klasse erbt von mehreren Basisklassen
+-   In Java nicht direkt möglich, aber durch Interfaces simulierbar
+-   Beispiel: `class Hund extends Tier implements Haustier`
+
+### Mehrstufige Vererbung
+
+-   Eine Kette von Vererbungen
+-   Beispiel: `class Tier -> class Säugetier -> class Hund`
+
+## Praktische Beispiele
 
 ```java
-// Oberklasse
-class Tier {
-    String name;
+// Basisklasse
+class Fahrzeug {
+    protected String marke;
+    protected int baujahr;
 
-    void essen() {
-        System.out.println(name + " isst.");
+    public Fahrzeug(String marke, int baujahr) {
+        this.marke = marke;
+        this.baujahr = baujahr;
+    }
+
+    public void fahren() {
+        System.out.println("Das Fahrzeug fährt.");
     }
 }
 
-// Unterklasse
-class Hund extends Tier {
-    void bellen() {
-        System.out.println(name + " bellt: Wuff!");
-    }
-}
+// Abgeleitete Klasse
+class Auto extends Fahrzeug {
+    private int anzahlTüren;
 
-// Hauptprogramm
-public class VererbungBeispiel {
-    public static void main(String[] args) {
-        Hund hund = new Hund();
-        hund.name = "Bello";  // Attribut der Oberklasse
-        hund.essen();         // Methode der Oberklasse
-        hund.bellen();        // Methode der Unterklasse
+    public Auto(String marke, int baujahr, int anzahlTüren) {
+        super(marke, baujahr);
+        this.anzahlTüren = anzahlTüren;
+    }
+
+    @Override
+    public void fahren() {
+        System.out.println("Das Auto fährt auf der Straße.");
     }
 }
 ```
 
-## **Ausgabe:**
+## Vorteile und Nachteile
 
-```
-Bello isst.
-Bello bellt: Wuff!
-```
+### Vorteile
 
----
+-   Code-Wiederverwendung
+-   Bessere Strukturierung
+-   Erweiterbarkeit
+-   Polymorphismus
 
-## **Erklärung:**
+### Nachteile
 
-1. **`Tier`** ist die Oberklasse, die allgemeine Eigenschaften und Methoden definiert (z. B. `essen()`).
-2. **`Hund`** ist die Unterklasse, die die Eigenschaften von `Tier` erbt und neue Methoden hinzufügt (z. B. `bellen()`).
-3. Im Hauptprogramm (`main`) wird ein Objekt der Klasse `Hund` erstellt, das auf Methoden und Attribute der Oberklasse sowie der Unterklasse zugreifen kann.
+-   Starke Kopplung
+-   Komplexität bei tiefen Hierarchien
+-   Schwierige Wartung bei Änderungen
+-   Potenzielle Verletzung des Single-Responsibility-Prinzips
 
-Vererbung ermöglicht eine einfache und saubere Wiederverwendbarkeit des Codes!
+## Zusammenfassung
+
+Vererbung ist ein mächtiges Werkzeug in der objektorientierten Programmierung, das bei richtiger Anwendung zu sauberem und wartbarem Code führen kann. Es ist wichtig, die Vor- und Nachteile abzuwägen und Vererbung nur dort einzusetzen, wo es sinnvoll ist.
+
+## Weiterführende Links
+
+-   [Java Tutorial: Vererbung](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+-   [C# Vererbung](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/classes-and-structs/inheritance)
+-   [SOLID Principles](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)

@@ -1,90 +1,65 @@
-## 2025-03-12
+# Vererbung vs. Interface (2025-03-12)
 
-### **Vererbung vs. Interface**
+## Zusammenfassung
 
-#### **1. Einführung**
+In diesem Eintrag beschäftige ich mich mit den Unterschieden und Anwendungsfällen von Vererbung und Interfaces in der objektorientierten Programmierung.
 
-In C# gibt es zwei wesentliche Konzepte zur Strukturierung von Code und zur Definition von Beziehungen zwischen Klassen: **Interfaces** und **Vererbung**. Beide Konzepte haben ihre spezifischen Anwendungsfälle, und es ist wichtig zu verstehen, wann man welches verwenden sollte.
+## Lernziele
 
-#### **2. Interface**
+-   Verständnis der Konzepte Vererbung und Interface
+-   Vergleich der beiden Ansätze
+-   Best Practices für die Verwendung
+-   Praktische Anwendungsbeispiele
 
-Ein **Interface** ist eine Sammlung von Methodendeklarationen ohne Implementierung. Klassen, die ein Interface implementieren, müssen alle darin definierten Methoden implementieren. Interfaces sind besonders nützlich, wenn verschiedene Klassen unterschiedliche Implementierungen einer Methode bereitstellen sollen, aber eine gemeinsame Schnittstelle benötigen.
+## Inhaltsverzeichnis
 
--   **Vorteile von Interfaces:**
+1. [Einführung](#einführung)
+2. [Vererbung](#vererbung)
+3. [Interfaces](#interfaces)
+4. [Vergleich](#vergleich)
+5. [Zusammenfassung](#zusammenfassung)
 
-    -   Ermöglichen eine lose Kopplung zwischen Klassen.
-    -   Eine Klasse kann mehrere Interfaces implementieren, was mehr Flexibilität bietet.
-    -   Sie fördern das Konzept der **Programmiere gegen Schnittstellen, nicht gegen Implementierungen**.
+## Einführung
 
--   **Beispiel:**
+Vererbung und Interfaces sind zwei grundlegende Konzepte der objektorientierten Programmierung, die unterschiedliche Ansätze zur Wiederverwendung von Code und zur Strukturierung von Klassen bieten.
 
-    ```csharp
-    public interface IBewegbar
-    {
-        void Bewege();
-    }
+## Vererbung
 
-    public class Auto : IBewegbar
-    {
-        public void Bewege()
-        {
-            Console.WriteLine("Auto fährt");
-        }
-    }
+-   **Definition**: Eine Klasse erbt Eigenschaften und Methoden von einer anderen Klasse
+-   **Vorteile**:
+    -   Code-Wiederverwendung
+    -   Polymorphismus
+    -   Hierarchische Strukturierung
+-   **Nachteile**:
+    -   Starke Kopplung
+    -   Inflexibilität bei Änderungen
 
-    public class Fahrrad : IBewegbar
-    {
-        public void Bewege()
-        {
-            Console.WriteLine("Fahrrad fährt");
-        }
-    }
-    ```
+## Interfaces
 
-#### **3. Vererbung**
+-   **Definition**: Ein Vertrag, der definiert, welche Methoden eine Klasse implementieren muss
+-   **Vorteile**:
+    -   Lose Kopplung
+    -   Mehrfachimplementierung möglich
+    -   Flexibilität
+-   **Nachteile**:
+    -   Keine Code-Wiederverwendung
+    -   Mehr Aufwand bei der Implementierung
 
-Vererbung ermöglicht es einer Klasse, von einer anderen Klasse zu erben. Die abgeleitete Klasse erbt die Mitglieder der Basisklasse (Methoden, Eigenschaften, Felder) und kann sie entweder unverändert verwenden oder überschreiben. Vererbung bietet eine starke Kopplung zwischen der Basisklasse und der abgeleiteten Klasse, was bedeutet, dass Änderungen an der Basisklasse Auswirkungen auf die abgeleiteten Klassen haben können.
+## Vergleich
 
--   **Vorteile von Vererbung:**
+| Aspekt           | Vererbung | Interface              |
+| ---------------- | --------- | ---------------------- |
+| Kopplung         | Stark     | Lose                   |
+| Wiederverwendung | Code      | Nur Methodensignaturen |
+| Flexibilität     | Gering    | Hoch                   |
+| Implementierung  | Einfach   | Komplexer              |
 
-    -   Erleichtert die Wiederverwendung von Code.
-    -   Eine klare Hierarchie und Struktur zwischen den Klassen.
-    -   Ermöglicht es, gemeinsame Funktionalitäten in der Basisklasse zu definieren.
+## Zusammenfassung
 
--   **Beispiel:**
+Vererbung eignet sich besonders für "ist-ein" Beziehungen und wenn Code-Wiederverwendung im Vordergrund steht. Interfaces sind besser für "kann" Beziehungen und wenn Flexibilität wichtig ist.
 
-    ```csharp
-    public class Fahrzeug
-    {
-        public void Bewege()
-        {
-            Console.WriteLine("Fahrzeug bewegt sich");
-        }
-    }
+## Weiterführende Links
 
-    public class Auto : Fahrzeug
-    {
-        public void Hupen()
-        {
-            Console.WriteLine("Auto hupt");
-        }
-    }
-    ```
-
-#### **4. Unterschiede und Wann man Was verwenden sollte**
-
--   **Vererbung:**
-
-    -   Wird verwendet, wenn es eine **"ist-ein"**-Beziehung zwischen der Basisklasse und der abgeleiteten Klasse gibt. Zum Beispiel ist ein `Auto` ein `Fahrzeug`.
-    -   Vererbung eignet sich, wenn es eine **gemeinsame Funktionalität** in einer Basisklasse gibt, die von abgeleiteten Klassen geteilt werden soll.
-
--   **Interface:**
-    -   Wird verwendet, wenn es eine **"hat-ein"**-Beziehung oder eine **Verhaltensbeschreibung** ohne gemeinsame Implementierung gibt. Zum Beispiel implementieren sowohl `Auto` als auch `Fahrrad` das Interface `IBewegbar`, ohne dass sie dieselbe Implementierung haben müssen.
-    -   Ein Interface sollte verwendet werden, wenn mehrere Klassen **unabhängig** voneinander das gleiche Verhalten implementieren sollen.
-
-**5. Fazit**
-
--   **Vererbung** ist nützlich, wenn eine klare Hierarchie und Vererbung von Funktionalitäten erforderlich ist.
--   **Interfaces** sind flexibler und ermöglichen eine lose Kopplung und das Teilen von Verhalten zwischen nicht verwandten Klassen.
-
-In der Praxis wird oft eine Kombination aus beiden verwendet, um sowohl die Wiederverwendbarkeit von Code als auch die Flexibilität in der Struktur zu maximieren.
+-   [Java Tutorial: Vererbung](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+-   [Java Tutorial: Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+-   [Design Patterns](https://refactoring.guru/design-patterns)
