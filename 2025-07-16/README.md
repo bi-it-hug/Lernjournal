@@ -1,8 +1,4 @@
-# Task-App mit Express.js und MongoDB
-
-## Projektübersicht
-
-Dieses Projekt ist eine RESTful API für eine Task-Management-Anwendung, entwickelt mit Node.js, Express.js und MongoDB. Die Anwendung implementiert ein vollständiges Authentifizierungssystem mit JWT-Tokens und bietet CRUD-Operationen für Aufgaben.
+# Backend
 
 ## Technologie-Stack
 
