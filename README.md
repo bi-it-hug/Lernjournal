@@ -4,6 +4,7 @@ Willkommen in meinem Lernjournal-Repository! Dieses Repository enthält Lernjour
 
 ## Inhaltsverzeichnis
 
+- [2026-07-10: Custom Theme in MudBlazor](./2026-07-10/)
 - [2026-06-25: React Native](./2026-06-25/)
 - [2026-02-13: Mergen in der Versionskontrolle](./2026-02-13/)
 - [2026-02-06: CSS Utilities in MudBlazor](./2026-02-06/)
