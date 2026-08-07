@@ -1,6 +1,6 @@
 ## 2026-07-17
 
-### **Erkenntnisse seit letztem Freitag**
+### **Dark Mode und Theme-Persistenz**
 
 Seit dem letzten Lernjournal-Eintrag habe ich mein Verständnis für den Aufbau einer konsistenten Oberfläche in MudBlazor vertieft. Besonders wichtig war die Erkenntnis, dass ein Theme nicht nur aus einzelnen Farben besteht, sondern als zentrale Grundlage für die gesamte Anwendung dient. Wenn Farben, Typografie und Layout-Regeln an einer Stelle definiert sind, bleibt die UI einheitlicher und spätere Anpassungen werden einfacher.
 

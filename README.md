@@ -4,7 +4,8 @@ Willkommen in meinem Lernjournal-Repository! Dieses Repository enthält Lernjour
 
 ## Inhaltsverzeichnis
 
-- [2026-07-17: Erkenntnisse seit letztem Freitag](./2026-07-17/)
+- [2026-08-07: AppState und ResolvedTheme](./2026-08-07/)
+- [2026-07-17: Dark Mode und Theme-Persistenz](./2026-07-17/)
 - [2026-07-10: Custom Theme in MudBlazor](./2026-07-10/)
 - [2026-06-25: React Native](./2026-06-25/)
 - [2026-02-13: Mergen in der Versionskontrolle](./2026-02-13/)
