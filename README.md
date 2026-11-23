@@ -4,6 +4,11 @@ Willkommen in meinem Lernjournal-Repository! Dieses Repository enthält Lernjour
 
 ## Inhaltsverzeichnis
 
+- [2026-11-19: Figma-Mockups mit shadcn-Komponenten](./2026-11-19/)
+- [2026-11-12: DevOps-Strukturbild, Figma-Teams und Vertiefungsarbeit](./2026-11-12/)
+- [2026-11-05: DevOps: Modul 324 im Überblick](./2026-11-05/)
+- [2026-10-22: SmartFarming UI: Projektstart als Product Owner](./2026-10-22/)
+- [2026-10-16: Figma: Textbearbeitung und flexible Komponenten](./2026-10-16/)
 - [2026-08-07: AppState und ResolvedTheme](./2026-08-07/)
 - [2026-07-17: Dark Mode und Theme-Persistenz](./2026-07-17/)
 - [2026-07-10: Custom Theme in MudBlazor](./2026-07-10/)
